@@ -12,7 +12,7 @@ This project builds a machine learning model to predict the **Remaining Useful L
 │ └── RUL_FD001.txt
 ├── cmapss.ipynb # Main notebook: preprocessing, modeling, evaluation
 ├── streamlit_app.py # Interactive Streamlit dashboard
-└──README.md # Project overview and instructions
+└── README.md # Project overview and instructions
 
 ---
 
@@ -103,3 +103,5 @@ MIT License. See LICENSE for details.
 NASA Prognostics Center
 CMAPSS Dataset (2008)
 scikit-learn, LightGBM, Streamlit
+
+---
