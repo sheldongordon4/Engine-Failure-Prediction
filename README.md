@@ -90,10 +90,13 @@ Sensor trend plots
 Risk classification and RUL alerts
 CSV batch upload for predictions
 
+---
 
 ## License
 
 MIT License. See LICENSE for details.
+
+---
 
 ## Acknowledgments
 
