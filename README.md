@@ -4,19 +4,6 @@ This project builds a machine learning model to predict the **Remaining Useful L
 
 ---
 
-## Project Structure
-
-.
-├── data/ # CMAPSS dataset files
-│ ├── train_FD001.txt
-│ ├── test_FD001.txt
-│ └── RUL_FD001.txt
-├── cmapss.ipynb # Main notebook: preprocessing, modeling, evaluation
-├── streamlit_app.py # Interactive Streamlit dashboard
-└── README.md # Project overview and instructions
-
----
-
 ## Dataset Description
 
 - **Train Set**: Full run-to-failure history for 100 engines
@@ -83,6 +70,7 @@ Launch a real-time dashboard to monitor engine health:
 
 ```bash
 streamlit run rul_app.py
+```
 
 Features:
 
