@@ -90,11 +90,12 @@ Sensor trend plots
 Risk classification and RUL alerts
 CSV batch upload for predictions
 
-License
+
+### License
 
 MIT License. See LICENSE for details.
 
-Acknowledgments
+### Acknowledgments
 
 NASA Prognostics Center
 CMAPSS Dataset (2008)
