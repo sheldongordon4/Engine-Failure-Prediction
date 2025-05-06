@@ -12,11 +12,11 @@ st.title("Engine Health Monitoring Dashboard")
 st.markdown("Monitor, assess, and predict the health of turbofan engines using NASA CMAPSS data.")
 
 # Sidebar filters
-st.sidebar.header("🔧 Configuration")
+st.sidebar.header("Configuration")
 threshold = st.sidebar.slider("RUL Threshold (for Inspection)", 10, 50, 30)
 selected_sensor = st.sidebar.selectbox("Sensor to Monitor", [f"sensor_{i}" for i in range(1, 22)])
 
-# Simulated engine data
+# Engine data
 engine_ids = list(range(1, 101))
 np.random.seed(42)
 engine_df = pd.DataFrame({
@@ -66,11 +66,3 @@ if uploaded_file:
     uploaded_df = pd.read_csv(uploaded_file)
     st.write("Uploaded Batch Data")
     st.dataframe(uploaded_df)
-    
-
-# Save to file
-# file_path = "/mnt/data/streamlit_app.py"
-# with open(file_path, "w") as f:
-#    f.write(streamlit_template)
-
-# file_path
