@@ -69,7 +69,7 @@ This enables:
 Launch a real-time dashboard to monitor engine health:
 
 ```bash
-streamlit run rul_app.py
+streamlit run monitor_engine.py
 ```
 
 Features:
