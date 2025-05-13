@@ -1,14 +1,25 @@
 # Engine Failure Prediction – RUL Estimation with NASA CMAPSS
 
-This project builds a machine learning model to predict the **Remaining Useful Life (RUL)** of turbofan engines using NASA’s CMAPSS dataset. The system supports predictive maintenance by identifying engines at risk of failure before it happens — reducing downtime, improving safety, and optimizing maintenance scheduling.
+This project uses machine learning to estimate the Remaining Useful Life (RUL) of turbofan engines based on NASA’s CMAPSS dataset. The system is designed to enable predictive maintenance, helping engineers and technicians prevent failure, reduce downtime, and optimize maintenance planning.
+
+## Project Highlights
+- **Data-Driven Maintenance**
+Uses real-world engine data to forecast failures before they happen.
+- **ML Model Trained for RUL Prediction**
+Compares Support Vector Regressor, Random Forest, and LightGBM — with LightGBM selected for its superior performance.
+- **Evaluation Metrics**
+  - **MAE***: 18.01
+  - **RMSE**: 24.31
+- **Deployed with Streamlit**
+A real-time dashboard for monitoring engine health and predicting risk.
 
 ---
 
 ## Dataset Description
-
+NASA CMAPSS dataset from Kaggle includes:
 - **Train Set**: Full run-to-failure history for 100 engines
 - **Test Set**: Partial lifecycle up to a cut-off point
-- **RUL File**: Ground truth Remaining Useful Life for test engines
+- **RUL File**: Ground truth for Remaining Useful Life
 
 Each entry contains:
 - Engine ID
@@ -25,8 +36,8 @@ Each entry contains:
 - Constructed RUL as `RUL = EOL - cycle_time`
 - Dropped low-variance sensors
 - Selected sensors showing degradation trends
-- Standardized features using `StandardScaler`
-- Ensured consistency across train/test sets
+- Applied `StandardScaler` for normalization
+- Ensured feature consistency across train/test sets
 
 ---
 
@@ -39,11 +50,7 @@ Tested three regression models:
 | Random Forest Regressor  | 31.74 |
 | **LightGBM**              | **31.32** (selected) |
 
-Final performance (on evaluation set):
-- **MAE**: 18.01  
-- **RMSE**: 24.31  
-
-✅ LightGBM was selected for its speed, accuracy, and built-in feature importance.
+✅ LightGBM was selected for its speed, accuracy, and built-in feature importance insights.
 
 ---
 
@@ -59,14 +66,14 @@ The system classifies engine health based on RUL:
 
 This enables:
 - Proactive failure prevention  
-- Optimized maintenance planning  
-- Reduced cost and downtime
+- Cost-optimized maintenance planning  
+- Improved equipment safety
 
 ---
 
 ## Streamlit Dashboard
 
-Launch a real-time dashboard to monitor engine health:
+Launch the app with:
 
 ```bash
 streamlit run monitor_engine.py
@@ -74,10 +81,11 @@ streamlit run monitor_engine.py
 
 Features:
 
-Engine-wise health visualization
-Sensor trend plots
-Risk classification and RUL alerts
-CSV batch upload for predictions
+- Real-time RUL prediction
+- Engine-wise health visualization
+- Sensor degradation trend plots
+- Maintenance risk classification
+- CSV batch upload for bulk predictions
 
 ---
 
