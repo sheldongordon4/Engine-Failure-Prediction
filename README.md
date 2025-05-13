@@ -8,7 +8,7 @@ Uses real-world engine data to forecast failures before they happen.
 - **ML Model Trained for RUL Prediction**
 Compares Support Vector Regressor, Random Forest, and LightGBM — with LightGBM selected for its superior performance.
 - **Evaluation Metrics**
-  - **MAE***: 18.01
+  - **MAE**: 18.01
   - **RMSE**: 24.31
 - **Deployed with Streamlit**
 A real-time dashboard for monitoring engine health and predicting risk.
